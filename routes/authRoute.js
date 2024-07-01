@@ -2,12 +2,14 @@ import express from 'express';
 import {registerController, loginController, testController,dashboradController,forgotPassword,resetPassword} from "../controller/authController.js";
 import {requireSignIn, isAdmin} from '../middleware/authMiddleware.js';
 import { categoryCOntroller , getCategories } from '../controller/categoryCOntroller.js';
+//import { productController } from '../controller/productController.js';
 
 
 
  const router = express.Router();
  
  router.post('/register', registerController);
+ // router.post('/products', productController);
  router.post('/category',categoryCOntroller);
  
  router.get('/category/ALL',getCategories);
