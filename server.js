@@ -23,7 +23,7 @@ app.get('/', (req, res) =>{
     // })
 });
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8080 || process.env.SERVER_APP_API;
 
 app.listen(PORT, () =>{
     console.log('Applicatipn is running on port: ', PORT)
